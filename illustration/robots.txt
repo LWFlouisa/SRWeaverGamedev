@@ -1,0 +1,4 @@
+Sitemap: https://lwflouisa.neocities.org/OldIllustrations
+
+User-agent: *
+Disallow: /
