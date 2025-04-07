@@ -33,3 +33,27 @@
 <If "%{HTTP_USER_AGENT} == 'PerplexityBot'">
         Require all denied
 </If>
+
+<If "%{HTTP_USER_AGENT} == 'DataForSeoBot'">
+        Require all denied
+</If>
+
+<If "%{HTTP_USER_AGENT} == 'AhrefsBot'">
+        Require all denied
+</If>
+
+<If "%{HTTP_USER_AGENT} == 'GoogleBot'">
+        Require all denied
+</If>
+
+<If "%{HTTP_USER_AGENT} == 'GoogleOther'">
+        Require all denied
+</If>
+
+<If "%{HTTP_USER_AGENT} == 'bingbot'">
+        Require all denied
+</If>
+
+<If "%{HTTP_USER_AGENT} == 'YandexBot'">
+        Require all denied
+</If>
