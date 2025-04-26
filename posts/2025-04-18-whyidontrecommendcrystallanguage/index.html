@@ -64,7 +64,18 @@ https://lwflouisa.nekoweb.org/OldIllustrations/illustrations.html
   <body>
     <main>
       <div>
-      <iframe title="Yumemoire Updates" width="560" height="315" src="https://video.ploud.jp/video-playlists/embed/cb05f500-87ed-4873-8b96-75fb0e3b36a8" frameborder="0" allowfullscreen="" sandbox="allow-same-origin allow-scripts allow-popups allow-forms"></iframe>
+      <h2>Crystal Is Not Recommended</h2>
+<p>I do not personally recommend Crystal Language if you’re coming from a Ruby background, rather I would personally recommend going straight from Ruby to C language, are there are several reasons for this:</p>
+<p>They completely removed or never implemented global variables, same deal with instance variables: if you’re going to enforce encapsulation, you would think the use of instance variables would be something that’s encouraged. And yet that’s where the issue comes:</p>
+<p>Suppose I tried implementing modules their way: I also get reprimanded for using instance variable within a function. Why exactly do you think I’m using instance variables if I’m not suppose to use global variables?</p>
+<p>There are other instances where it runs just fine as interpreted code, but I run into issues when trying to do the same thing as compiled code: when the entire reason you would compile your code to exclusively distribute the binaries so people can’t get around and mess with your source code.</p>
+<p>I pretty much can only use Local variables, which in practice means having to read in variables from a file and convert them into strings or integers, and do that locally for every time I create a new function.</p>
+<p>What these essentially does is make it where every function you right might as well be written as procedural programming, because there is absolutely no point in trying to use modules, because the variables you would want to use for that purpose aren’t even available to use.</p>
+<p>There is not this problem in the C language, because its entirely functional programming: You initialize a window after including libraries, and then create functions outside of this window. You can even do private functions, or functions accessing only to a higher function.</p>
+<p>The other issue is that you can even do private functions inside of Crystal language, something that has been common place in C language for an extremely long period of time.</p>
+<p>If you’re wanting to learn a new scripting language, Crystal would not be the place to go, if what you’re wanting to do is build game engine framework, unless you don’t mind the idea of having modules only run external compiled code.</p>
+<p>Now I may be able to use Crystal for certain specific scripts that don't require the use of machine learning of sharing variables across method. But Crystal language is really kind of a shitty language for use in isolation.</p>
+<p>Update: So I just did some testing, and there is also no real speed benefit either. Pretty much the only benefit is to protect my source code from tampering. Which the only reason I've been doing that is because of web scrapers.</p>
 
       </div>
     </main>

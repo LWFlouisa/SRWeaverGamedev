@@ -64,7 +64,50 @@ https://lwflouisa.nekoweb.org/OldIllustrations/illustrations.html
   <body>
     <main>
       <div>
-      <iframe title="Yumemoire Updates" width="560" height="315" src="https://video.ploud.jp/video-playlists/embed/cb05f500-87ed-4873-8b96-75fb0e3b36a8" frameborder="0" allowfullscreen="" sandbox="allow-same-origin allow-scripts allow-popups allow-forms"></iframe>
+      <h2>Dungeon Creation System</h2>
+<p><a href="">#dungeongeneration</a> <a href="">#statisticsfactchecking</a></p>
+<p>I've created a process for creating dungeons and measure probabilistically whether they should increase or decrease in size, and whether to connect rooms:</p>
+<pre><code>
+require_relative "DungeonCalculator/DungeonCalculator.rb"
+
+## Defines the process for generated small, medium, and large rooms.
+def small_dungeon
+  DungeonCalculator::Generator.create_small
+end
+
+def medium_dungeon
+  DungeonCalculator::Generator.create_medium
+end
+
+def large_dungeon
+  DungeonCalculator::Generator.create_large
+end
+
+## Defines process for measuring room size and checking connectivity.
+def calculate_room_size
+  DungeonCalculator::Measurement.room_type
+end
+
+def calculate_room_connectivity
+  DungeonCalculator::Measurement.rooms_connected
+end
+
+loop do
+  print "Do you wish you to measure room size, check connectivity, or create a room?"; process = gets.chomp
+
+  if    "create small"       == process; small_dungeon
+  elsif "create medium"      == process; medium_dungeon
+  elsif "create large"       == process; large_dungeon
+  elsif "check connectivity" == process; calculate_room_size
+  elsif "check size"         == process; calculate_room_connectivity
+  elsif "exit"
+    abort
+  else
+    puts ">> Not sure what to measure or create..."
+  end
+end</code>
+</pre>
+<p>Here I can largely streamline the process for creating text based maps.</p>
 
       </div>
     </main>
