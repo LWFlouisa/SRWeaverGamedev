@@ -1,72 +1,164 @@
-<!doctype html>
 <html>
   <style>
-
     body {
-      background-image: linear-gradient(95deg, #1D211E, #111412);
-      background-color: #1C1C1E;
+      background-color: #161413;
+      border: solid #42423E 12px;
 
-      padding-left:  128px;
-      padding-right: 128px;
-      padding-top:   128px;
-      padding-bottom: 128px;
+      padding-left: 256px;
+      padding-right: 256px;
+      padding-top: 16px;
+      padding-bottom: 16px;
     }
+    
+    h1, h2, h3, h4, h5, h6, p, pre {
+      color: #736D6A;
+      font-family: monospace;
+      font-size: 16px;
 
-    h1, h2, h3, h4, h5, h6, p, pre, hr, th, ol, ul, title {
-      color: #81859F;
-
-      padding-left:  24px;
-      padding-right: 24px;
-      padding-top:   6px;
-      padding-bottom: 6px;
+      padding-left: 256px;
+      padding-right: 256px;
     }
 
     a {
-      color: #A99889;
-      text-align: center;
+      color: #876F59;
+      font-family: monospace;
+      font-size: 16px;
 
-      padding-left:  18px;
-      padding-right: 18px;
-      padding-top:   18px;
-      padding-bottom: 286px;
+      padding-left: 256px;
+      padding-right: 256px;
     }
 
     div {
-      color: #81859F;
+      background-color: #292726;
+      font-family: monospace;
+      font-size: 16px;
 
-      background-color:   background-image: linear-gradient(95deg, #623D21, #BDA05E);
+      padding-top: 6px;
+      padding-bottom: 6px;
     }
+
+    .tags {
+      color: #C3BFBC;
+
+      padding-left: 256px;
+      padding-right: 256px;
+    }
+
+    .translation {
+      color: #C3BFBC;
+
+      padding-left: 256px;
+      padding-right: 256px;
+    }
+
+    .gunmetal {
+      background-color: #2B2A30;
+      font-family: monospace;
+    }
+
+video {
+  width: 400px;
+}
+#playlist {
+  width: 400px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+.active a {
+  color: #5db0e6;
+  text-decoration: none;
+}
+li a {
+  color: #eeeedd;
+  background: #333;
+  padding: 12px;
+  display: block;
+}
+li a:hover {
+  text-decoration: none;
+}
   </style>
-  <script src="https://cdn.counter.dev/script.js" data-id="67dce6be-123b-4b00-9afb-7979dee1c804" data-utcoffset="-6"></script>
-<center>
-<pre>
-     ___|         _ \           \ \        /                                       
-   \___ \        |   |           \ \  \   /     _ \    _` |  \ \   /    _ \    __| 
-         |       __ <             \ \  \ /      __/   (   |   \ \ /     __/   |    
-   _____/   _)  _| \_\  _)         \_/\_/     \___|  \__,_|    \_/    \___|  _|    
 
-
-  ##########          #   ######              #   # ######### #        
-  #        #         #      #        ######   #   #         # #   ###  
-          #     #   #   ##########        #   #   #         # ####     
-         #       # #        #             #   #   # ########  #        
-        #         #         #             #      #         #  #        
-      ##        ## #        #      ##########   #          #  #        
-    ##        ##    #        ####             ##    ########   ####### 
-      
-https://lwflouisa.nekoweb.org/OldIllustrations/illustrations.html
-
-</pre>
-  <title>My Blog</title>
-  <hr />
-    <center><a href="https://lwflouisa.github.io/SRWeaverGamedev/colorpalette/">Color Palette</a> | <a href="https://lwflouisa.github.io/SRWeaverGamedev/newsletter/">Newsletter</a> | <a href="https://lwflouisa.github.io/SRWeaverGamedev/games/">Games</a> | <a href="https://lwflouisa.github.io/SRWeaverGamedev/writing/">Writing</a> | <a href="https://lwflouisa.github.io/SRWeaverGamedev/music/">Music</a> | <a href="https://lwflouisa.github.io/SRWeaverGamedev/conlang/">Conlang</a> | <a href="https://lwflouisa.github.io/SRWeaverGamedev/illustration/">Illustrations</a><a href="https://lwflouisa.nekoweb.org/OldIllustrations/illustrations.html">Old Illustrations</a><a href="https://lwflouisa.github.io/SRWeaverGamedev/goodnightauburnhairVN/GoodnightAuburnHair.png">Upcoming</a><a href="http://lwflouisa.github.io/SRWeaverGamedev/videos/">Blog</a><a href="http://lwflouisa.github.io/SRWeaverGamedev/blog/">Blog</a><a href="http://lwflouisa.github.io/SRWeaverGamedev/mastodon/">Socials</a><br /></center>
-  <hr />
   <body>
-    <main>
-      <div>
-      <iframe title="Yumemoire Updates" width="560" height="315" src="https://video.ploud.jp/video-playlists/embed/cb05f500-87ed-4873-8b96-75fb0e3b36a8" frameborder="0" allowfullscreen="" sandbox="allow-same-origin allow-scripts allow-popups allow-forms"></iframe>
+    <video id="videoplaylist" preload="auto" tabindex="0" controls="" >
+      <source src="https://lwflouisa.github.io/Blogfolio/videos/NeonBloodWithHauntedSurf.mp4">
+    </video>
 
-      </div>
-    </main>
-  </body>
+    <ul id="playlist">
+          <li class="active">
+             <a href="https://lwflouisa.github.io/Blogfolio/videos/NeonBloodWithHauntedSurf.mp4">
+               Neon Blood And The Haunted Surf
+             </a>
+          </li>
+
+<!--          <li>
+              <a href="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4">
+                  ElephantsDream
+              </a>
+          </li>-->
+
+      </ul>
+
+      <script>
+ init();
+
+function init(){
+    var videoplaylist = document.getElementById('videoplaylist');
+    var playlist = document.getElementById('playlist');
+    var tracks = playlist.getElementsByTagName('a');
+    videoplaylist.volume = 0.10;
+    videoplaylist.play();
+    
+    for(var track in tracks) {
+      var link = tracks[track];
+      if(typeof link === "function" || typeof link === "number") continue;
+      
+			link.addEventListener('click', function(e) {
+      	e.preventDefault();
+        var song = this.getAttribute('href');
+       	run(song, videoplaylist, this);
+      });
+    }
+    
+    videoplaylist.addEventListener('ended',function(e) {
+        for(var track in tracks) {
+					var link = tracks[track];
+          var nextTrack = parseInt(track) + 1;
+        	if(typeof link === "function" || typeof link === "number") continue;
+          if(!this.src) this.src = tracks[0];
+          if(track == (tracks.length - 1)) nextTrack = 0;
+                                	console.log(nextTrack);
+        	if(link.getAttribute('href') === this.src) {
+          	var nextLink = tracks[nextTrack];
+          	run(nextLink.getAttribute('href'), videoplaylist, nextLink);
+            break;
+          }
+        }
+    });
+}
+
+function run(song, videoplaylist, link){
+				var parent = link.parentElement;
+
+				//quitar el active de todos los elementos de la lista
+				var items = parent.parentElement.getElementsByTagName('li');
+        for(var item in items) {
+					if(items[item].classList)
+        		items[item].classList.remove("active");
+        }
+        
+        //agregar active a este elemento
+        parent.classList.add("active");
+        
+        //tocar la cancion
+        videoplaylist.src = song;
+        videoplaylist.load();
+        videoplaylist.play();
+}
+      </script>
+  <body>
 </html>
